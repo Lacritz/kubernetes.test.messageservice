@@ -1,0 +1,4 @@
+FROM java:8
+EXPOSE 9000
+ADD /build/libs/TimeService-1.0.0.jar TimeService-1.0.0.jar
+ENTRYPOINT ["java", "-jar", "TimeService-1.0.0.jar"]

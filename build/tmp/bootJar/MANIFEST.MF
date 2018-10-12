@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Start-Class: com.timogruen.kubernetes.example.timeservice.TimeServiceK
+ t
+Main-Class: org.springframework.boot.loader.JarLauncher
+
