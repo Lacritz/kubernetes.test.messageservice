@@ -1,9 +1,7 @@
-
-
 plugins {
-    id("org.jetbrains.kotlin.jvm") version '1.2.51'
+    id("org.jetbrains.kotlin.jvm") version "1.2.51"
     id("org.springframework.boot") version "2.0.2.RELEASE"
-    id("org.jetbrains.kotlin.plugin.spring") version '1.2.51'
+    id("org.jetbrains.kotlin.plugin.spring") version "1.2.51"
     id("io.spring.dependency-management") version "1.0.4.RELEASE"
 }
 
@@ -29,3 +27,9 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+/*
+docker {
+    name 'timogruen.com/kubernetes/example/messageservice'
+}
+ */

@@ -1,1 +1,0 @@
-/Users/tg/eclipse-workspace/kotlin/TimeService/build/classes/kotlin/main/com/timogruen/kubernetes/example/timeservice/TimeService.class:/Users/tg/eclipse-workspace/kotlin/TimeService/build/classes/kotlin/main/com/timogruen/kubernetes/example/timeservice/TimeServiceKt.class

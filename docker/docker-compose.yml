@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  messageservice:
+    image: timogruen.com/kubernetes/example/messageservice:latest
+    links:
+      - timeservice
+    ports:
+      - 9001:9001
+
+  timeservice:
+    image: timogruen.com/kubernetes/example/timeservice:latest
+    ports:
+      - 9000:9000
