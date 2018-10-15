@@ -6,17 +6,19 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RequestMethod
 import org.springframework.web.client.RestTemplate
+import java.net.InetAddress
+
 
 @SpringBootApplication
 @RequestMapping(value = ["/api/v1"])
 class TimeService {
-    @RequestMapping(value = ["/message/{string}"], method = [RequestMethod.GET])
-    fun getMessage(string: String): ResponseEntity<String> {
+
+    @RequestMapping(value = ["/message"], method = [RequestMethod.GET])
+    fun getMessage(): ResponseEntity<String> {
         val template = RestTemplate()
-        val time = template.getForEntity(
-                "http://timeservice/api/v1/time",
-                String::class.java)
-        return ResponseEntity.ok("$time: $string ")
+        val time = template.getForEntity("http://timeservice:9000/api/v1/time", String::class.java)
+        val ip = InetAddress.getByName("timeservice")
+        return ResponseEntity.ok("[${ip.hostAddress}] - ${time.body}: Hello World!")
     }
 
     @RequestMapping(value = ["/shutdown"], method = [RequestMethod.POST])

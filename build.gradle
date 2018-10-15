@@ -27,9 +27,3 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
-
-/*
-docker {
-    name 'timogruen.com/kubernetes/example/messageservice'
-}
- */
