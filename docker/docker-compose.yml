@@ -2,13 +2,17 @@ version: "3"
 
 services:
   messageservice:
-    image: timogruen.com/kubernetes/example/messageservice:latest
+    image: timogruen.com/kubernetes/example/messageservice:1.0.0
     links:
       - timeservice
     ports:
       - 9001:9001
+    labels:
+      kompose.service.type: "LoadBalancer"
+      kompose.service.expose: "true"
+
 
   timeservice:
-    image: timogruen.com/kubernetes/example/timeservice:latest
+    image: timogruen.com/kubernetes/example/timeservice:1.0.0
     ports:
       - 9000:9000
