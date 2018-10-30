@@ -78,6 +78,9 @@ Now you are able to access the services using:
 ```
 curl 127.0.0.1:9001/api/v1/message/{text}
 ```
+```
+while true; do curl 127.0.0.1:32209/api/v1/message/test; sleep 1; done
+```
 
 #### Scale your services
 TDB!
