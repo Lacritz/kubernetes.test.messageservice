@@ -64,7 +64,7 @@ minikube start
 Docker has to push his images to the minikube instance - to add them into path, use the following:
 ```
 eval $(minikube docker-env)
-docker build -t timogruen.com/kubernetes/example/messageservice .
+docker build -t timogruen.com/kubernetes/example/messageservice:1.0.0 .
 ```
 _Note: that you publish the TimeService as well!_
 
