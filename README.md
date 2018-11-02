@@ -83,7 +83,14 @@ while true; do curl 127.0.0.1:32209/api/v1/message/test; sleep 1; done
 ```
 
 #### Scale your services
-TDB!
+To scale your service use:
+```
+kubectl scale deployment --replicas=<AMOUNT> <DEPLOYMENT>
+```
+To scale the timeservice to 2 replicas, just use:
+```
+kubectl scale deployment --replicas=2 timeservice
+```
 
 #### Stop Minikube
 Since minikube mimics a complete kubernetes cluster, make sure to stop minikube, once you are finished.
