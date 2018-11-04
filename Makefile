@@ -8,12 +8,14 @@ dockerCompose: dockerImage
 	cd ./docker && docker-compose up -d
 
 kubectlDeleteServices:
-	kubectl delete services messageservice \
-  && kubectl delete services timeservice
+	kubectl delete services messageservice timeservice
 
-kubectlDeleteDeployment: kubectlDeleteServices
+kubectlDeleteDeployment:
 	kubectl delete deployments messageservice \
 	&& kubectl delete deployments timeservice
+
+
+kubectlDeleteAll: kubectlDeleteServices  kubectlDeleteDeployment
 
 komposeUp:
 	cd ./docker && kompose up
